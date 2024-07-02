@@ -58,4 +58,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 loaderWrapper.style.visibility = 'hidden'; // Hide loader
             }, 2000); // Replace 2000 with actual loading time or remove for actual content load detection
         });
-       
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+        
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    card.classList.toggle('flipped');
+                });
+            });
+        });
+      
